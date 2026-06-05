@@ -1,0 +1,46 @@
+{
+	"keyboard_name": "RP2040 Joystick",
+	"manufacturer": "The Odd Bit",
+	"maintainer": "lars@oddbit.com",
+	"usb": {
+		"vid": "0x1209",
+		"pid": "0x2642",
+		"device_version": "0.0.1"
+	},
+	"processor": "RP2040",
+	"bootloader": "rp2040",
+	"diode_direction": "COL2ROW",
+	"matrix_pins": {
+		"direct": [["GP0", "GP1", "GP2", "GP3", "GP4", "GP5"]]
+	},
+	"ws2812": {
+		"pin": "GP16",
+		"driver": "vendor"
+	},
+	"rgblight": {
+		"led_count": 1,
+		"max_brightness": 64
+	},
+	"joystick": {
+		"axes": {},
+		"button_count": 1,
+		"driver": "digital"
+	},
+	"features": {
+		"rgblight": true,
+		"joystick": true,
+		"combo": true
+	},
+	"layouts": {
+		"LAYOUT": {
+			"layout": [
+				{ "matrix": [0, 0], "x": 0, "y": 0, "label": "Layer Next" },
+				{ "matrix": [0, 1], "x": 1, "y": 0, "label": "Layer Prev" },
+				{ "matrix": [0, 2], "x": 2, "y": 0, "label": "Up" },
+				{ "matrix": [0, 3], "x": 3, "y": 0, "label": "Down" },
+				{ "matrix": [0, 4], "x": 4, "y": 0, "label": "Left" },
+				{ "matrix": [0, 5], "x": 5, "y": 0, "label": "Right" }
+			]
+		}
+	}
+}
