@@ -13,6 +13,17 @@
 	"matrix_pins": {
 		"direct": [["GP0", "GP2", "GP3", "GP4", "GP5"]]
 	},
+	"ws2812": {
+		"pin": "GP16",
+		"driver": "vendor"
+	},
+	"rgblight": {
+		"led_count": 1,
+		"max_brightness": 64
+	},
+	"features": {
+		"rgblight": true
+	},
 	"layouts": {
 		"LAYOUT": {
 			"layout": [
