@@ -21,8 +21,14 @@
 		"led_count": 1,
 		"max_brightness": 64
 	},
+	"joystick": {
+		"axes": {},
+		"button_count": 1,
+		"driver": "digital"
+	},
 	"features": {
-		"rgblight": true
+		"rgblight": true,
+		"joystick": true
 	},
 	"layouts": {
 		"LAYOUT": {
