@@ -1,5 +1,7 @@
 # QMK configuration for joystick input device.
 
+This project implements the QMK firmware configuration for the "joyboard" custom input device.
+
 ## Overview
 
 The joyboard consists of a joystick, two encoders (with pushbuttons), four arcade buttons, and two 3-way rocker switches.
@@ -34,10 +36,10 @@ The joyboard consists of a joystick, two encoders (with pushbuttons), four arcad
 | 4    | ENC1-Switch |
 | 2    | ENC1-A      |
 | 3    | ENC1-B      |
-| -    | TOGGLE0-A   |
-| -    | TOGGLE0-B   |
-| -    | TOGGLE1-A   |
-| -    | TOGGLE1-B   |
+| 27   | TOGGLE0-A   |
+| 26   | TOGGLE0-B   |
+| 15   | TOGGLE1-A   |
+| 14   | TOGGLE1-B   |
 
 ## Layouts
 

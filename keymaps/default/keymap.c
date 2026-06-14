@@ -7,7 +7,7 @@ enum custom_keycodes {
     HAT_RIGHT,
 };
 
-const uint16_t PROGMEM boot_combo[] = {KC_MUTE, KC_MPLY, COMBO_END};
+const uint16_t PROGMEM boot_combo[] = {KC_MUTE, KC_F20, COMBO_END};
 combo_t                key_combos[] = {
     COMBO(boot_combo, QK_BOOT),
 };
@@ -57,7 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  HAT_LEFT,  // GP9  - Joy Left
                  HAT_RIGHT, // GP10 - Joy Right
                  HAT_DOWN,  // GP11 - Joy Down
-                 HAT_UP     // GP12 - Joy Up
+                 HAT_UP,    // GP12 - Joy Up
+                 KC_E,      // GP27 - Toggle 0 A
+                 KC_F,      // GP26 - Toggle 0 B
+                 KC_G,      // GP15 - Toggle 1 A
+                 KC_H       // GP14 - Toggle 1 B
                  ),
 };
 
