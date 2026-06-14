@@ -20,24 +20,24 @@ The joyboard consists of a joystick, two encoders (with pushbuttons), four arcad
 
 | GPIO | Connection  |
 | ---- | ----------- |
-| 0    | BTN0        |
-| 1    | BTN1        |
-| 2    | BTN2        |
-| 3    | BTN3        |
-| 4    | ENC0-Switch |
+| 10   | JOY RIGHT   |
+| 9    | JOY LEFT    |
+| 12   | JOY UP      |
+| 11   | JOY DOWN    |
+| 0    | BUTTON1     |
+| 1    | BUTTON0     |
+| 28   | BUTTON2     |
+| 29   | BUTTON3     |
+| 7    | ENC0-Switch |
 | 5    | ENC0-A      |
 | 6    | ENC0-B      |
-| 7    | TGL0-A      |
-| 8    | TGL0-B      |
-| 9    | JOYX+       |
-| 10   | JOYX-       |
-| 11   | JOYY+       |
-| 12   | JOYY-       |
-| 14   | ENC1-Switch |
-| 15   | ENC1-A      |
-| 26   | ENC1-B      |
-| 27   | TGL1-A      |
-| 28   | TGL1-B      |
+| 4    | ENC1-Switch |
+| 2    | ENC1-A      |
+| 3    | ENC1-B      |
+| -    | TOGGLE0-A   |
+| -    | TOGGLE0-B   |
+| -    | TOGGLE1-A   |
+| -    | TOGGLE1-B   |
 
 ## Layouts
 

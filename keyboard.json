@@ -11,7 +11,13 @@
 	"bootloader": "rp2040",
 	"diode_direction": "COL2ROW",
 	"matrix_pins": {
-		"direct": [["GP0", "GP1", "GP2", "GP3", "GP4", "GP5"]]
+		"direct": [["GP0", "GP1", "GP28", "GP29", "GP7", "GP4", "GP9", "GP10", "GP11", "GP12"]]
+	},
+	"encoder": {
+		"rotary": [
+			{ "pin_a": "GP5", "pin_b": "GP6" },
+			{ "pin_a": "GP2", "pin_b": "GP3" }
+		]
 	},
 	"ws2812": {
 		"pin": "GP16",
@@ -29,17 +35,22 @@
 	"features": {
 		"rgblight": true,
 		"joystick": true,
-		"combo": true
+		"combo": true,
+		"encoder": true
 	},
 	"layouts": {
 		"LAYOUT": {
 			"layout": [
-				{ "matrix": [0, 0], "x": 0, "y": 0, "label": "Layer Next" },
-				{ "matrix": [0, 1], "x": 1, "y": 0, "label": "Layer Prev" },
-				{ "matrix": [0, 2], "x": 2, "y": 0, "label": "Up" },
-				{ "matrix": [0, 3], "x": 3, "y": 0, "label": "Down" },
-				{ "matrix": [0, 4], "x": 4, "y": 0, "label": "Left" },
-				{ "matrix": [0, 5], "x": 5, "y": 0, "label": "Right" }
+				{ "matrix": [0, 0], "x": 0, "y": 0, "label": "Button 1" },
+				{ "matrix": [0, 1], "x": 1, "y": 0, "label": "Button 0" },
+				{ "matrix": [0, 2], "x": 2, "y": 0, "label": "Button 2" },
+				{ "matrix": [0, 3], "x": 3, "y": 0, "label": "Button 3" },
+				{ "matrix": [0, 4], "x": 4, "y": 0, "label": "Enc 0 Switch" },
+				{ "matrix": [0, 5], "x": 5, "y": 0, "label": "Enc 1 Switch" },
+				{ "matrix": [0, 6], "x": 6, "y": 0, "label": "Joy Left" },
+				{ "matrix": [0, 7], "x": 7, "y": 0, "label": "Joy Right" },
+				{ "matrix": [0, 8], "x": 8, "y": 0, "label": "Joy Down" },
+				{ "matrix": [0, 9], "x": 9, "y": 0, "label": "Joy Up" }
 			]
 		}
 	}
