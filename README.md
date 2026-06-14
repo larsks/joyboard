@@ -29,6 +29,10 @@ The joyboard consists of a joystick, two encoders (with pushbuttons), four arcad
 | 6    | ENC0-B      |
 | 7    | TGL0-A      |
 | 8    | TGL0-B      |
+| 9    | JOYX+       |
+| 10   | JOYX-       |
+| 11   | JOYY+       |
+| 12   | JOYY-       |
 | 14   | ENC1-Switch |
 | 15   | ENC1-A      |
 | 26   | ENC1-B      |
