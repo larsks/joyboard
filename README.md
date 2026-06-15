@@ -13,7 +13,6 @@ The joyboard consists of a joystick, two encoders (with pushbuttons), four arcad
 | Enclosure      | [Otdorpatio 160x110x90 mm project box](https://a.co/d/0czWrPIz)                                                                 |
 | Rocker switch  | [mxuteuk snap-in round momentary rocker switch](https://a.co/d/0cHW5Blm)                                                        |
 | Rotary encoder | [Taiss EC11 rotary encoder](https://a.co/d/08Swv7bY)                                                                            |
-| Knobs          | [Tais 20mm black aluminum knob](https://a.co/d/0dfDT7EH)                                                                        |
 | Arcade buttons | [EG STARTS 24mm arcade buttons](https://a.co/d/00qQOsl5)                                                                        |
 | Joystick       | [Seimitsu LS-40](https://paradisearcadeshop.com/collections/seimitsu-ls-40-series/products/seimitsu-ls-40-01-se-joystick-black) |
 | Controller     | [Waveshare RP2040-Zero](https://www.waveshare.com/rp2040-zero.htm)                                                              |
@@ -40,6 +39,27 @@ The joyboard consists of a joystick, two encoders (with pushbuttons), four arcad
 | 26   | TOGGLE0-B   |
 | 15   | TOGGLE1-A   |
 | 14   | TOGGLE1-B   |
+
+## RP2040-Zero pinouts
+
+```
+              ┌───┐
+    5V ─── ┌──└───┘──┐ ─── GP0
+   GND ─── │   USB   │ ─── GP1
+    3V ─── │         │ ─── GP2
+  GP29 ─── │         │ ─── GP3
+  GP28 ─── │         │ ─── GP4
+  GP27 ─── │         │ ─── GP5
+  GP26 ─── │         │ ─── GP6
+  GP15 ─── │         │ ─── GP7
+  GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
+            │ │ │ │ │
+            │ │ │ │ │
+            G G G G G
+            P P P P P
+            1 1 1 1 9
+            3 2 1 0
+```
 
 ## Layouts
 
