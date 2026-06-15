@@ -13,34 +13,33 @@ combo_t                key_combos[] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    bool retval = true;
+
     if (!record->event.pressed) {
         if (keycode == HAT_UP || keycode == HAT_DOWN || keycode == HAT_LEFT || keycode == HAT_RIGHT) {
             joystick_set_hat(JOYSTICK_HAT_CENTER);
             joystick_flush();
-            return false;
+            retval = false;
         }
-        return true;
+        return retval;
     }
 
     switch (keycode) {
         case HAT_UP:
             joystick_set_hat(JOYSTICK_HAT_NORTH);
-            joystick_flush();
-            return false;
+            retval = false;
         case HAT_DOWN:
             joystick_set_hat(JOYSTICK_HAT_SOUTH);
-            joystick_flush();
-            return false;
+            retval = false;
         case HAT_LEFT:
             joystick_set_hat(JOYSTICK_HAT_WEST);
-            joystick_flush();
-            return false;
+            retval = false;
         case HAT_RIGHT:
             joystick_set_hat(JOYSTICK_HAT_EAST);
-            joystick_flush();
-            return false;
+            retval = false;
     }
-    return true;
+    joystick_flush();
+    return retval;
 }
 
 void keyboard_post_init_user(void) {
