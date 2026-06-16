@@ -42,10 +42,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return retval;
 }
 
-void keyboard_post_init_user(void) {
-    rgblight_sethsv_noeeprom(HSV_BLUE);
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(KC_A,      // GP0  - Button 1
                  KC_B,      // GP1  - Button 0
