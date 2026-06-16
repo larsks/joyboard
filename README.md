@@ -4,18 +4,17 @@ This project implements the QMK firmware configuration for the "joyboard" custom
 
 ## Overview
 
-The joyboard consists of a joystick, two encoders (with pushbuttons), four arcade buttons, and two 3-way rocker switches.
+The joyboard consists of a joystick, two rotary encoders (with pushbuttons), four arcade buttons, and two 3-way rocker switches.
 
 ## Parts list
 
-| Item           | Detail                                                                                                                          |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Enclosure      | [Otdorpatio 160x110x90 mm project box](https://a.co/d/0czWrPIz)                                                                 |
-| Rocker switch  | [mxuteuk snap-in round momentary rocker switch](https://a.co/d/0cHW5Blm)                                                        |
-| Rotary encoder | [Taiss EC11 rotary encoder](https://a.co/d/08Swv7bY)                                                                            |
-| Arcade buttons | [EG STARTS 24mm arcade buttons](https://a.co/d/00qQOsl5)                                                                        |
-| Joystick       | [Seimitsu LS-40](https://paradisearcadeshop.com/collections/seimitsu-ls-40-series/products/seimitsu-ls-40-01-se-joystick-black) |
-| Controller     | [Waveshare RP2040-Zero](https://www.waveshare.com/rp2040-zero.htm)                                                              |
+- [160mmx110mmx90mm project box](https://a.co/d/0czWrPIz)
+- [Snap-in round momentary rocker switch](https://a.co/d/0cHW5Blm)
+- [EC11 rotary encoder](https://a.co/d/08Swv7bY)
+- [24mm arcade buttons](https://a.co/d/00qQOsl5)
+- [Seimitsu LS-40 Joystick](https://paradisearcadeshop.com/collections/seimitsu-ls-40-series/products/seimitsu-ls-40-01-se-joystick-black)
+- [Waveshare RP2040-Zero](https://www.waveshare.com/rp2040-zero.htm)
+- [D-type USB C panel mount](https://a.co/d/0aqtTgPk)
 
 ## Pin assignments
 
