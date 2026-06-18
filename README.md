@@ -18,46 +18,25 @@ The joyboard consists of a joystick, two rotary encoders (with pushbuttons), fou
 
 ## Pin assignments
 
-| GPIO | Connection  |
-| ---- | ----------- |
-| 10   | JOY RIGHT   |
-| 9    | JOY LEFT    |
-| 12   | JOY UP      |
-| 11   | JOY DOWN    |
-| 0    | BUTTON1     |
-| 1    | BUTTON0     |
-| 28   | BUTTON2     |
-| 29   | BUTTON3     |
-| 7    | ENC0-Switch |
-| 5    | ENC0-A      |
-| 6    | ENC0-B      |
-| 4    | ENC1-Switch |
-| 2    | ENC1-A      |
-| 3    | ENC1-B      |
-| 27   | TOGGLE0-A   |
-| 26   | TOGGLE0-B   |
-| 15   | TOGGLE1-A   |
-| 14   | TOGGLE1-B   |
-
-## RP2040-Zero pinouts
-
 ```
-              ┌───┐
-    5V ─── ┌──└───┘──┐ ─── GP0
-   GND ─── │   USB   │ ─── GP1
-    3V ─── │         │ ─── GP2
-  GP29 ─── │         │ ─── GP3
-  GP28 ─── │         │ ─── GP4
-  GP27 ─── │         │ ─── GP5
-  GP26 ─── │         │ ─── GP6
-  GP15 ─── │         │ ─── GP7
-  GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
-            │ │ │ │ │
-            │ │ │ │ │
-            G G G G G
-            P P P P P
-            1 1 1 1 9
-            3 2 1 0
+                      ┌───┐
+            5V ─── ┌──└───┘──┐ ─── GP0 BUTTON1
+           GND ─── │   USB   │ ─── GP1 BUTTON0
+            3V ─── │         │ ─── GP2 ENC1-A
+BUTTON3   GP29 ─── │         │ ─── GP3 ENC1-B
+BUTTON2   GP28 ─── │         │ ─── GP4 ENC1-Switch
+TOGGLE0-A GP27 ─── │         │ ─── GP5 ENC0-A
+TOGGLE0-B GP26 ─── │         │ ─── GP6 ENC0-B
+TOGGLE1-A GP15 ─── │         │ ─── GP7 ENC0-Switch
+TOGGLE1-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
+                    │ │ │ │ │
+                    │ │ │ │ │
+                    G G G G G
+                    P P P P P
+                    1 1 1 1 9
+                    3 2 1 0
+
+           JOYSTICK U D R L          
 ```
 
 ## Layouts
