@@ -33,6 +33,7 @@
 		"driver": "digital"
 	},
 	"features": {
+		"bootmagic": true,
 		"rgblight": true,
 		"joystick": true,
 		"combo": true,
