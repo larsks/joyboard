@@ -12,6 +12,14 @@ enum custom_keycodes {
     SHOW_LAYER,
 };
 
+enum layer_names {
+    LAYER_JOYSTICK = 0,
+    LAYER_NIRI,
+    LAYER_BROWSER,
+    LAYER_MAPS,
+    LAYER_ARROWS,
+};
+
 #define NUM_LAYERS 5
 #define SYSTEM_MICROPHONE_MUTE 0xA9
 
@@ -112,93 +120,93 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Joystick
-    LAYOUT(         //
-        JS_0,       // GP28 - Button 0
-        JS_1,       // GP29 - Button 1
-        JS_2,       // GP1  - Button 2
-        JS_3,       // GP0  - Button 3
-        HAT_UP,     // GP12 - Joy Up
-        HAT_DOWN,   // GP11 - Joy Down
-        HAT_RIGHT,  // GP10 - Joy Right
-        HAT_LEFT,   // GP9  - Joy Left
-        KC_MUTE,    // GP4  - Enc 0 Switch
-        MICMUTE,    // GP7  - Enc 1 Switch
-        PREV_LAYER, // GP14 - Toggle 0 A
-        NEXT_LAYER, // GP15 - Toggle 0 B
-        TO(0),      // GP26 - Toggle 1 A
-        SAVE_LAYER  // GP27 - Toggle 1 B
-        ),
-
-    // Arrow keys
-    LAYOUT(       //
-        KC_F13,   // GP28 - Button 0
-        KC_F14,   // GP29 - Button 1
-        KC_F15,   // GP1  - Button 2
-        KC_F16,   // GP0  - Button 3
-        KC_UP,    // GP12 - Joy Up
-        KC_DOWN,  // GP11 - Joy Down
-        KC_RIGHT, // GP10 - Joy Right
-        KC_LEFT,  // GP9  - Joy Left
-        KC_TRNS,  // GP4  - Enc 0 Switch
-        KC_TRNS,  // GP7  - Enc 1 Switch
-        KC_TRNS,  // GP14 - Toggle 0 A
-        KC_TRNS,  // GP15 - Toggle 0 B
-        KC_TRNS,  // GP26 - Toggle 1 A
-        KC_TRNS   // GP27 - Toggle 1 B
+    [LAYER_JOYSTICK] = LAYOUT( //
+        JS_0,                  // GP28 - Button 0
+        JS_1,                  // GP29 - Button 1
+        JS_2,                  // GP1  - Button 2
+        JS_3,                  // GP0  - Button 3
+        HAT_UP,                // GP12 - Joy Up
+        HAT_DOWN,              // GP11 - Joy Down
+        HAT_RIGHT,             // GP10 - Joy Right
+        HAT_LEFT,              // GP9  - Joy Left
+        KC_MUTE,               // GP4  - Enc 0 Switch
+        MICMUTE,               // GP7  - Enc 1 Switch
+        PREV_LAYER,            // GP14 - Toggle 0 A
+        NEXT_LAYER,            // GP15 - Toggle 0 B
+        TO(0),                 // GP26 - Toggle 1 A
+        SAVE_LAYER             // GP27 - Toggle 1 B
         ),
 
     // Desktop control
-    LAYOUT(             //
-        KC_TRNS,        // GP28 - Button 0
-        KC_TRNS,        // GP29 - Button 1
-        KC_TRNS,        // GP1  - Button 2
-        KC_TRNS,        // GP0  - Button 3
-        LGUI(KC_PGUP),  // GP12 - Joy Up
-        LGUI(KC_PGDN),  // GP11 - Joy Down
-        LGUI(KC_RIGHT), // GP10 - Joy Right
-        LGUI(KC_LEFT),  // GP9  - Joy Left
-        KC_TRNS,        // GP4  - Enc 0 Switch
-        KC_TRNS,        // GP7  - Enc 1 Switch
-        KC_TRNS,        // GP14 - Toggle 0 A
-        KC_TRNS,        // GP15 - Toggle 0 B
-        KC_TRNS,        // GP26 - Toggle 1 A
-        KC_TRNS         // GP27 - Toggle 1 B
+    [LAYER_NIRI] = LAYOUT( //
+        G(KC_O),           // GP28 - Button 0
+        G(KC_Q),           // GP29 - Button 1
+        G(KC_F),           // GP1  - Button 2
+        KC_LCTL,           // GP0  - Button 3
+        G(KC_PGUP),        // GP12 - Joy Up
+        G(KC_PGDN),        // GP11 - Joy Down
+        G(KC_RIGHT),       // GP10 - Joy Right
+        G(KC_LEFT),        // GP9  - Joy Left
+        KC_TRNS,           // GP4  - Enc 0 Switch
+        KC_TRNS,           // GP7  - Enc 1 Switch
+        KC_TRNS,           // GP14 - Toggle 0 A
+        KC_TRNS,           // GP15 - Toggle 0 B
+        KC_TRNS,           // GP26 - Toggle 1 A
+        KC_TRNS            // GP27 - Toggle 1 B
+        ),
+
+    // Arrow keys
+    [LAYER_ARROWS] = LAYOUT( //
+        KC_F13,              // GP28 - Button 0
+        KC_F14,              // GP29 - Button 1
+        KC_F15,              // GP1  - Button 2
+        KC_F16,              // GP0  - Button 3
+        KC_UP,               // GP12 - Joy Up
+        KC_DOWN,             // GP11 - Joy Down
+        KC_RIGHT,            // GP10 - Joy Right
+        KC_LEFT,             // GP9  - Joy Left
+        KC_TRNS,             // GP4  - Enc 0 Switch
+        KC_TRNS,             // GP7  - Enc 1 Switch
+        KC_TRNS,             // GP14 - Toggle 0 A
+        KC_TRNS,             // GP15 - Toggle 0 B
+        KC_TRNS,             // GP26 - Toggle 1 A
+        KC_TRNS              // GP27 - Toggle 1 B
         ),
 
     // Browser control
-    LAYOUT(            //
-        KC_TRNS,       // GP28 - Button 0
-        KC_TRNS,       // GP29 - Button 1
-        KC_TRNS,       // GP1  - Button 2
-        KC_TRNS,       // GP0  - Button 3
-        KC_UP,         // GP12 - Joy Up
-        KC_DOWN,       // GP11 - Joy Down
-        LCTL(KC_PGDN), // GP10 - Joy Right
-        LCTL(KC_PGUP), // GP9  - Joy Left
-        KC_TRNS,       // GP4  - Enc 0 Switch
-        KC_TRNS,       // GP7  - Enc 1 Switch
-        KC_TRNS,       // GP14 - Toggle 0 A
-        KC_TRNS,       // GP15 - Toggle 0 B
-        KC_TRNS,       // GP26 - Toggle 1 A
-        KC_TRNS        // GP27 - Toggle 1 B
+    [LAYER_BROWSER] = LAYOUT( //
+        C(KC_W),              // GP28 - Button 0
+        S(C(KC_T)),           // GP29 - Button 1
+        KC_TAB,               // GP1  - Button 2
+        KC_ENTER,             // GP0  - Button 3
+        KC_UP,                // GP12 - Joy Up
+        KC_DOWN,              // GP11 - Joy Down
+        C(KC_PGDN),           // GP10 - Joy Right
+        C(KC_PGUP),           // GP9  - Joy Left
+        KC_TRNS,              // GP4  - Enc 0 Switch
+        KC_TRNS,              // GP7  - Enc 1 Switch
+        KC_TRNS,              // GP14 - Toggle 0 A
+        KC_TRNS,              // GP15 - Toggle 0 B
+        KC_TRNS,              // GP26 - Toggle 1 A
+        KC_TRNS               // GP27 - Toggle 1 B
         ),
 
     // Map viewers
-    LAYOUT(             //
-        KC_MINUS,       // GP28 - Button 0
-        LSFT(KC_EQUAL), // GP29 - Button 1
-        KC_COMMA,       // GP1  - Button 2
-        KC_ESC,         // GP0  - Button 3
-        KC_UP,          // GP12 - Joy Up
-        KC_DOWN,        // GP11 - Joy Down
-        KC_RIGHT,       // GP10 - Joy Right
-        KC_LEFT,        // GP9  - Joy Left
-        KC_TRNS,        // GP4  - Enc 0 Switch
-        KC_TRNS,        // GP7  - Enc 1 Switch
-        KC_TRNS,        // GP14 - Toggle 0 A
-        KC_TRNS,        // GP15 - Toggle 0 B
-        KC_TRNS,        // GP26 - Toggle 1 A
-        KC_TRNS         // GP27 - Toggle 1 B
+    [LAYER_MAPS] = LAYOUT( //
+        KC_MINUS,          // GP28 - Button 0
+        S(KC_EQUAL),       // GP29 - Button 1
+        KC_COMMA,          // GP1  - Button 2
+        KC_ESC,            // GP0  - Button 3
+        KC_UP,             // GP12 - Joy Up
+        KC_DOWN,           // GP11 - Joy Down
+        KC_RIGHT,          // GP10 - Joy Right
+        KC_LEFT,           // GP9  - Joy Left
+        KC_TRNS,           // GP4  - Enc 0 Switch
+        KC_TRNS,           // GP7  - Enc 1 Switch
+        KC_TRNS,           // GP14 - Toggle 0 A
+        KC_TRNS,           // GP15 - Toggle 0 B
+        KC_TRNS,           // GP26 - Toggle 1 A
+        KC_TRNS            // GP27 - Toggle 1 B
         ),
 
 };
