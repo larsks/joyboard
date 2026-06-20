@@ -203,14 +203,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-// clang-format off
-#if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    {ENCODER_CCW_CW(LALT(KC_VOLD), LALT(KC_VOLU)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(LALT(KC_VOLD), LALT(KC_VOLU)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(LALT(KC_VOLD), LALT(KC_VOLU)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(LALT(KC_VOLD), LALT(KC_VOLU)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(LALT(KC_VOLD), LALT(KC_VOLU)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-};
-#endif
-// clang-format on
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) {
+        tap_code16(clockwise ? LALT(KC_VOLU) : LALT(KC_VOLD));
+    } else {
+        tap_code16(clockwise ? KC_VOLU : KC_VOLD);
+    }
+    return false;
+}
