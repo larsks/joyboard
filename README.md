@@ -20,15 +20,15 @@ The joyboard consists of a joystick, two rotary encoders (with pushbuttons), fou
 
 ```
                       ┌───┐
-            5V ─── ┌──└───┘──┐ ─── GP0 BUTTON1
-           GND ─── │   USB   │ ─── GP1 BUTTON0
-            3V ─── │         │ ─── GP2 ENC1-A
-BUTTON3   GP29 ─── │         │ ─── GP3 ENC1-B
-BUTTON2   GP28 ─── │         │ ─── GP4 ENC1-Switch
-TOGGLE0-A GP27 ─── │         │ ─── GP5 ENC0-A
-TOGGLE0-B GP26 ─── │         │ ─── GP6 ENC0-B
-TOGGLE1-A GP15 ─── │         │ ─── GP7 ENC0-Switch
-TOGGLE1-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
+            5V ─── ┌──└───┘──┐ ─── GP0 BUTTON3
+           GND ─── │   USB   │ ─── GP1 BUTTON2
+            3V ─── │         │ ─── GP2 ENC0-A
+BUTTON1   GP29 ─── │         │ ─── GP3 ENC0-B
+BUTTON0   GP28 ─── │         │ ─── GP4 ENC0-Switch
+TOGGLE1-A GP27 ─── │         │ ─── GP5 ENC1-A
+TOGGLE1-B GP26 ─── │         │ ─── GP6 ENC1-B
+TOGGLE0-A GP15 ─── │         │ ─── GP7 ENC1-Switch
+TOGGLE0-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
                     │ │ │ │ │
                     │ │ │ │ │
                     G G G G G
@@ -36,7 +36,7 @@ TOGGLE1-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
                     1 1 1 1 9
                     3 2 1 0
 
-           JOYSTICK U D R L          
+           JOYSTICK   U D R L        
 ```
 
 ## Layouts
