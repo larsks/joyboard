@@ -1,5 +1,5 @@
 {
-	"keyboard_name": "RP2040 Joystick",
+	"keyboard_name": "Joyboard",
 	"manufacturer": "The Odd Bit",
 	"maintainer": "lars@oddbit.com",
 	"usb": {
@@ -11,12 +11,29 @@
 	"bootloader": "rp2040",
 	"diode_direction": "COL2ROW",
 	"matrix_pins": {
-		"direct": [["GP0", "GP1", "GP28", "GP29", "GP7", "GP4", "GP9", "GP10", "GP11", "GP12", "GP27", "GP26", "GP15", "GP14"]]
+		"direct": [
+			[
+				"GP28",
+				"GP29",
+				"GP1",
+				"GP0",
+				"GP12",
+				"GP11",
+				"GP10",
+				"GP9",
+				"GP4",
+				"GP7",
+				"GP14",
+				"GP15",
+				"GP26",
+				"GP27"
+			]
+		]
 	},
 	"encoder": {
 		"rotary": [
-			{ "pin_a": "GP5", "pin_b": "GP6" },
-			{ "pin_a": "GP2", "pin_b": "GP3" }
+			{ "pin_a": "GP6", "pin_b": "GP5" },
+			{ "pin_a": "GP3", "pin_b": "GP2" }
 		]
 	},
 	"ws2812": {
@@ -29,11 +46,12 @@
 	},
 	"joystick": {
 		"axes": {},
-		"button_count": 1,
+		"button_count": 4,
 		"driver": "digital"
 	},
 	"features": {
 		"bootmagic": true,
+		"extrakey": true,
 		"rgblight": true,
 		"joystick": true,
 		"combo": true,
@@ -42,20 +60,20 @@
 	"layouts": {
 		"LAYOUT": {
 			"layout": [
-				{ "matrix": [0, 0], "x": 0, "y": 0, "label": "Button 1" },
-				{ "matrix": [0, 1], "x": 1, "y": 0, "label": "Button 0" },
-				{ "matrix": [0, 2], "x": 2, "y": 0, "label": "Button 2" },
-				{ "matrix": [0, 3], "x": 3, "y": 0, "label": "Button 3" },
-				{ "matrix": [0, 4], "x": 4, "y": 0, "label": "Enc 0 Switch" },
-				{ "matrix": [0, 5], "x": 5, "y": 0, "label": "Enc 1 Switch" },
-				{ "matrix": [0, 6], "x": 6, "y": 0, "label": "Joy Left" },
-				{ "matrix": [0, 7], "x": 7, "y": 0, "label": "Joy Right" },
-				{ "matrix": [0, 8], "x": 8, "y": 0, "label": "Joy Down" },
-				{ "matrix": [0, 9], "x": 9, "y": 0, "label": "Joy Up" },
-				{ "matrix": [0, 10], "x": 10, "y": 0, "label": "Toggle 0 A" },
-				{ "matrix": [0, 11], "x": 11, "y": 0, "label": "Toggle 0 B" },
-				{ "matrix": [0, 12], "x": 12, "y": 0, "label": "Toggle 1 A" },
-				{ "matrix": [0, 13], "x": 13, "y": 0, "label": "Toggle 1 B" }
+				{ "matrix": [0, 0], "x": 0, "y": 0, "label": "Btn 0" },
+				{ "matrix": [0, 1], "x": 1, "y": 0, "label": "Btn 1" },
+				{ "matrix": [0, 2], "x": 2, "y": 0, "label": "Btn 2" },
+				{ "matrix": [0, 3], "x": 3, "y": 0, "label": "Btn 3" },
+				{ "matrix": [0, 4], "x": 4, "y": 0, "label": "Joy U" },
+				{ "matrix": [0, 5], "x": 5, "y": 0, "label": "Joy D" },
+				{ "matrix": [0, 6], "x": 6, "y": 0, "label": "Joy R" },
+				{ "matrix": [0, 7], "x": 7, "y": 0, "label": "Joy L" },
+				{ "matrix": [0, 8], "x": 8, "y": 0, "label": "Enc 0 Sw" },
+				{ "matrix": [0, 9], "x": 9, "y": 0, "label": "Enc 1 Sw" },
+				{ "matrix": [0, 10], "x": 10, "y": 0, "label": "Tgl 0 A" },
+				{ "matrix": [0, 11], "x": 11, "y": 0, "label": "Tgl 0 B" },
+				{ "matrix": [0, 12], "x": 12, "y": 0, "label": "Tgl 1 A" },
+				{ "matrix": [0, 13], "x": 13, "y": 0, "label": "Tgl 1 B" }
 			]
 		}
 	}
