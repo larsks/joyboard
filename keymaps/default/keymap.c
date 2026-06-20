@@ -12,7 +12,7 @@ enum custom_keycodes {
     SHOW_LAYER,
 };
 
-#define NUM_LAYERS 4
+#define NUM_LAYERS 5
 #define SYSTEM_MICROPHONE_MUTE 0xA9
 
 // Press both encoder buttons to enter BOOTSEL mode
@@ -182,13 +182,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS,       // GP26 - Toggle 1 A
         KC_TRNS        // GP27 - Toggle 1 B
         ),
+
+    // Map viewers
+    LAYOUT(             //
+        KC_MINUS,       // GP28 - Button 0
+        LSFT(KC_EQUAL), // GP29 - Button 1
+        KC_COMMA,       // GP1  - Button 2
+        KC_ESC,         // GP0  - Button 3
+        KC_UP,          // GP12 - Joy Up
+        KC_DOWN,        // GP11 - Joy Down
+        KC_RIGHT,       // GP10 - Joy Right
+        KC_LEFT,        // GP9  - Joy Left
+        KC_TRNS,        // GP4  - Enc 0 Switch
+        KC_TRNS,        // GP7  - Enc 1 Switch
+        KC_TRNS,        // GP14 - Toggle 0 A
+        KC_TRNS,        // GP15 - Toggle 0 B
+        KC_TRNS,        // GP26 - Toggle 1 A
+        KC_TRNS         // GP27 - Toggle 1 B
+        ),
+
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
-    {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}, {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}, {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}, {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}, {ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
 };
 #endif
