@@ -8,13 +8,18 @@ The joyboard consists of a joystick, two rotary encoders (with pushbuttons), fou
 
 ## Parts list
 
-- [160mmx110mmx90mm project box](https://a.co/d/0czWrPIz)
-- [Snap-in round momentary rocker switch](https://a.co/d/0cHW5Blm)
-- [EC11 rotary encoder](https://a.co/d/08Swv7bY)
-- [24mm arcade buttons](https://a.co/d/00qQOsl5)
-- [Seimitsu LS-40 Joystick](https://paradisearcadeshop.com/collections/seimitsu-ls-40-series/products/seimitsu-ls-40-01-se-joystick-black)
-- [Waveshare RP2040-Zero](https://www.waveshare.com/rp2040-zero.htm)
-- [D-type USB C panel mount](https://a.co/d/0aqtTgPk)
+| Quantity | Item                                                               |
+| -------- | ------------------------------------------------------------------ |
+| 1        | [160mmx110mmx90mm project box](https://a.co/d/0czWrPIz)            |
+| 2        | [Snap-in round momentary rocker switch](https://a.co/d/0cHW5Blm)   |
+| 2        | [Aluminum knob](https://a.co/d/036jfmPl)
+| 2        | [EC11 rotary encoder](https://a.co/d/08Swv7bY)                     |
+| 4        | [24mm arcade buttons](https://a.co/d/00qQOsl5)                     |
+| 1        | [Seimitsu LS-40 Joystick][joystick]                                |
+| 1        | [Waveshare RP2040-Zero](https://www.waveshare.com/rp2040-zero.htm) |
+| 1        | [D-type USB C panel mount](https://a.co/d/0aqtTgPk)                |
+
+[joystick]: https://paradisearcadeshop.com/collections/seimitsu-ls-40-series/products/seimitsu-ls-40-01-se-joystick-black
 
 ## Pin assignments
 
@@ -36,19 +41,22 @@ TOGGLE0-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
                     1 1 1 1 9
                     3 2 1 0
 
-           JOYSTICK   U D R L        
+           JOYSTICK - U D R L        
 ```
 
-## Layouts
+## Layout
 
-### Joystick on the side
+You can find `.dxf` drawings of the Joyboard in the [panel/](panel/) directory.
 
-![CAD drawing with joystick on the left](panel/control_layout_joystick_left.png)
-
-### Joystick centered
-
-![CAD drawing with joystick in the center](panel/control_layout_joystick_center.png)
+![CAD drawing with joystick on the left](panel/combined.png)
 
 ## Rendered images
 
-![Rendered image showing both panel layouts](panel/panel-rendered.png)
+Front view:
+
+![Rendered front view showing both panel layouts](panel/panel-rendered-front.png)
+
+Rear view:
+
+![Rendered rear view showing both panel layouts](panel/panel-rendered-rear.png)
+
