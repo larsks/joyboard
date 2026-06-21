@@ -7,6 +7,7 @@ enum custom_keycodes {
     HAT_RIGHT,
     MICMUTE,
     SAVE_LAYER,
+    GOTO_SAVED,
     NEXT_LAYER,
     PREV_LAYER,
     SHOW_LAYER,
@@ -63,6 +64,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             uint8_t current = get_highest_layer(layer_state);
             if (keycode == SAVE_LAYER) {
                 eeconfig_update_user(current);
+            } else if (keycode == GOTO_SAVED) {
+                uint8_t saved = eeconfig_read_user();
+                if (saved < NUM_LAYERS) {
+                    layer_move(saved);
+                } else {
+                    layer_move(0);
+                }
             } else if (keycode == NEXT_LAYER) {
                 layer_move((current + 1) % NUM_LAYERS);
             } else if (keycode == PREV_LAYER) {
@@ -133,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MICMUTE,               // GP7  - Enc 1 Switch
         PREV_LAYER,            // GP14 - Toggle 0 A
         NEXT_LAYER,            // GP15 - Toggle 0 B
-        TO(0),                 // GP26 - Toggle 1 A
+        GOTO_SAVED,            // GP26 - Toggle 1 A
         SAVE_LAYER             // GP27 - Toggle 1 B
         ),
 
