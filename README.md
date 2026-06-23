@@ -60,3 +60,24 @@ Rear view:
 
 ![Rendered rear view showing both panel layouts](panel/panel-rendered-rear.png)
 
+## Firmware
+
+To compile the firmware, run:
+
+```sh
+bash compile.sh
+```
+
+After placing the joyboard in BOOTSEL mode (entering bootsel mode), you can install new firmware by running:
+
+```sh
+bash install.sh
+```
+
+### Entering BOOTSEL mode
+
+There are two ways to enter bootsel mode:
+
+1. Hold down `BUTTON0` (upper left button) when plugging in the joyboard.
+
+2. While the joyboard is powered on, press both encoders down at the same time.
