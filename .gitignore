@@ -2,3 +2,4 @@
 *.blend1
 *.uf2
 .env
+/qmk_firmware
