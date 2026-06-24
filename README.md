@@ -1,6 +1,8 @@
-# QMK configuration for joystick input device.
+# Joyboard -- the joystick that thinks its a keyboard
 
-This project implements the QMK firmware configuration for the "joyboard" custom input device.
+I built a weird little joystick that runs [QMK] that can be used to control your computer, navigate your browser, or play your favorite vintage video game.
+
+[qmk]: https://qmk.fm/
 
 ## Overview
 
@@ -46,7 +48,9 @@ TOGGLE0-B GP14 ─── └┬─┬─┬─┬─┬┘ ────GP8
 
 ## Layout
 
-You can find `.dxf` drawings of the Joyboard in the [panel/](panel/) directory.
+You can find `.dxf` drawings of the Joyboard in the [panel/](panel/) directory. There is also an A2-sized [PDF] of the front, side, and rear layout.
+
+[pdf]: panel/combined.pdf
 
 ![CAD drawing with joystick on the left](panel/combined.png)
 
@@ -54,11 +58,21 @@ You can find `.dxf` drawings of the Joyboard in the [panel/](panel/) directory.
 
 Front view:
 
-![Rendered front view showing both panel layouts](panel/panel-rendered-front.png)
+![Rendered front view showing both panel layouts](images/panel-rendered-front.png)
 
 Rear view:
 
-![Rendered rear view showing both panel layouts](panel/panel-rendered-rear.png)
+![Rendered rear view showing both panel layouts](images/panel-rendered-rear.png)
+
+## Finished project
+
+Front view:
+
+![Photograph of the joyboard from the front](images/finished-front.jpg)
+
+Rear view:
+
+![Photograph of the joyboard from the back](images/finished-back.jpg)
 
 ## Firmware
 
